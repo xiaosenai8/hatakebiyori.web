@@ -4,7 +4,7 @@
 
 ## URL
 
-https://xiaosenai8.github.io/hatakebiyori.web/
+https://xiaosenai8.github.io/hatakebiyori-web/
 
 ## 使用技術
 
