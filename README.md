@@ -17,6 +17,8 @@ https://hatakebiyori-web.xiaosenai8.workers.dev
 | ファイル | 説明 | 取得元 |
 |---|---|---|
 | `images/icon.png` | アプリアイコン画像（双葉） | [iconbu](https://iconbu.com/illust/8513) |
+| `images/hero.jpg` | ヒーロー写真（夏野菜の収穫） | ご提供素材 |
+| `images/screenshots/*.png` | アプリスクリーンショット | アプリより |
 
 ## 開発補助
 

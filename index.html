@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>はたけ日和</title>
+  <title>はたけ日和 | 家庭菜園をかんたん管理</title>
+  <meta name="description" content="家庭菜園の記録をシンプルに管理できるiPhoneアプリ「はたけ日和」。作物登録から成長記録まで、あなたの畑仕事に寄り添います。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
@@ -13,13 +15,17 @@
   <!-- ナビゲーション -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">はたけ日和</a>
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-mark" aria-hidden="true">
+          <img src="images/icon.png" alt="">
+        </span>
+        <span class="nav-logo-text">はたけ日和</span>
+      </a>
       <ul class="nav-links">
         <li><a href="#howto">機能紹介</a></li>
         <li><a href="#qa">Q&amp;A</a></li>
-        <li><a href="#contact">問い合わせ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
       </ul>
-      <!-- ハンバーガーボタン（スマホのみ表示・一番右） -->
       <button class="nav-hamburger" aria-label="メニュー" onclick="toggleNav()">
         <span></span><span></span><span></span>
       </button>
@@ -27,104 +33,153 @@
   </nav>
 
   <!-- ヒーロー -->
-  <div class="hero">
-    <div class="hero-icon">
-      <img src="images/icon.png" alt="はたけ日和アイコン" loading="lazy">
-    </div>
-    <h1>はたけ日和</h1>
-    <p class="hero-tagline">家庭菜園をかんたん管理。今日も畑へ。</p>
-    <!-- ▼ App Store の URL に差し替えてください ▼ -->
-    <a href="https://apps.apple.com/jp/app/id6760701600" class="appstore-btn" target="_blank" rel="noopener noreferrer">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-    </a>
-  </div>
-
-  <!-- 使い方 -->
-  <section id="howto">
-    <p class="section-label">Features</p>
-    <h2 class="section-title">機能紹介</h2>
-
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">STEP 01</div>
-        <h3>作物を登録する</h3>
-        <p>＋ボタンから育てたい作物を追加。アイコンとカラーを自由に選べます。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">STEP 02</div>
-        <h3>記録をつける</h3>
-        <p>水やりや作業内容を記録して、育て方を振り返ることができます。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">STEP 03</div>
-        <h3>成長を見守る</h3>
-        <p>作物ごとの記録を一覧で確認。成長の様子を楽しんでください。</p>
-      </div>
-    </div>
-
-    <!-- スクリーンショットカルーセル -->
-    <div class="screenshot-wrapper">
-      <div class="screenshot-carousel">
-        <button class="carousel-btn carousel-btn--prev" aria-label="前へ">&#8249;</button>
-        <button class="carousel-btn carousel-btn--next" aria-label="次へ">&#8250;</button>
-        <div class="screenshot-track">
-          <img src="images/screenshots/1.png" alt="アプリスクリーンショット 1" loading="lazy">
-          <img src="images/screenshots/2.png" alt="アプリスクリーンショット 2" loading="lazy">
-          <img src="images/screenshots/3.png" alt="アプリスクリーンショット 3" loading="lazy">
-          <img src="images/screenshots/4.png" alt="アプリスクリーンショット 4" loading="lazy">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          家庭菜園アプリ for iPhone
+        </span>
+        <h1 class="hero-title">
+          家庭菜園を、<br>
+          <em>もっと、たのしく。</em>
+        </h1>
+        <p class="hero-tagline">
+          種まきから収穫まで。育てる毎日を、<br>
+          そっと記録するiPhoneアプリです。
+        </p>
+        <div class="hero-cta">
+          <a href="https://apps.apple.com/jp/app/id6760701600" class="appstore-btn" target="_blank" rel="noopener noreferrer">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeからダウンロード">
+          </a>
+          <a href="#howto" class="hero-link">機能をみる →</a>
         </div>
-        <div class="screenshot-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="images/hero.jpg" alt="竹かごに収穫したトマト・きゅうり・なす・オクラ">
+        </div>
+        <div class="hero-photo-tag" aria-hidden="true">
+          <span class="hero-photo-tag-label">today's harvest</span>
+          <span class="hero-photo-tag-date">夏のしゅうかく</span>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <!-- 機能紹介 -->
+  <section id="howto" class="section">
+    <header class="section-header">
+      <p class="section-label"><span class="section-label-line"></span>Features<span class="section-label-line"></span></p>
+      <h2 class="section-title">畑とつながる、3つのきほん</h2>
+      <p class="section-lead">むずかしい設定はいりません。植えて、書いて、見守るだけ。</p>
+    </header>
+
+    <div class="steps-grid">
+      <article class="step-card">
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V12"/>
+            <path d="M12 12c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6Z"/>
+            <path d="M12 12c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6Z"/>
+          </svg>
+        </div>
+        <div class="step-num">STEP 01</div>
+        <h3>作物を登録する</h3>
+        <p>＋ボタンから育てたい作物を追加。<br>アイコンとカラーを自由に選んで、自分だけの畑をつくれます。</p>
+      </article>
+
+      <article class="step-card">
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+            <polyline points="14 3 14 9 20 9"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="13" y2="17"/>
+          </svg>
+        </div>
+        <div class="step-num">STEP 02</div>
+        <h3>記録をつける</h3>
+        <p>水やりや作業内容、ひとことメモも。<br>ふりかえることで、毎日の畑仕事がもっと楽しくなります。</p>
+      </article>
+
+      <article class="step-card">
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <div class="step-num">STEP 03</div>
+        <h3>成長を見守る</h3>
+        <p>作物ごとの記録を一覧でチェック。<br>育ちの様子を比べたり、来年の参考にもできます。</p>
+      </article>
+    </div>
+
+    <!-- スクリーンショットカルーセル -->
+    <div class="screenshot-section">
+      <h3 class="screenshot-title">アプリの画面</h3>
+      <div class="screenshot-wrapper">
+        <div class="screenshot-carousel">
+          <button class="carousel-btn carousel-btn--prev" aria-label="前へ">&#8249;</button>
+          <button class="carousel-btn carousel-btn--next" aria-label="次へ">&#8250;</button>
+          <div class="screenshot-track">
+            <img src="images/screenshots/1.png" alt="アプリスクリーンショット 1" loading="lazy">
+            <img src="images/screenshots/2.png" alt="アプリスクリーンショット 2" loading="lazy">
+            <img src="images/screenshots/3.png" alt="アプリスクリーンショット 3" loading="lazy">
+            <img src="images/screenshots/4.png" alt="アプリスクリーンショット 4" loading="lazy">
+          </div>
+          <div class="screenshot-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Q&A -->
-  <section id="qa">
-    <p class="section-label">Q &amp; A</p>
-    <h2 class="section-title">よくある質問</h2>
+  <section id="qa" class="section section-qa">
+    <header class="section-header">
+      <p class="section-label"><span class="section-label-line"></span>Q &amp; A<span class="section-label-line"></span></p>
+      <h2 class="section-title">よくある質問</h2>
+    </header>
 
     <div class="qa-list">
-
       <div class="qa-item">
         <button class="qa-question" onclick="toggleQA(this)">無料で使えますか？</button>
-        <div class="qa-answer">はい、無料でご利用いただけます。</div>
+        <div class="qa-answer">はい、無料でご利用いただけます。広告なし・課金要素なしで、安心して使えます。</div>
       </div>
-
       <div class="qa-item">
         <button class="qa-question" onclick="toggleQA(this)">対応しているiOSバージョンは？</button>
         <div class="qa-answer">iOS 17以降に対応しています。</div>
       </div>
-
       <div class="qa-item">
         <button class="qa-question" onclick="toggleQA(this)">データはどこに保存されますか？</button>
         <div class="qa-answer">データはお使いのデバイス内にのみ保存されます。外部サーバーへの送信はありません。</div>
       </div>
-
       <div class="qa-item">
         <button class="qa-question" onclick="toggleQA(this)">iPad でも使えますか？</button>
         <div class="qa-answer">現在はiPhone向けに最適化されています。iPad対応は今後のアップデートで検討中です。</div>
       </div>
-
     </div>
   </section>
 
-  <hr class="section-divider">
-
-  <!-- 問い合わせ -->
-  <section id="contact">
+  <!-- お問い合わせ -->
+  <section id="contact" class="section">
     <div class="contact-box">
-      <p class="section-label">Contact</p>
+      <span class="contact-leaf" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22V12"/>
+          <path d="M12 12c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6Z"/>
+          <path d="M12 12c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6Z"/>
+        </svg>
+      </span>
+      <p class="section-label"><span class="section-label-line"></span>Contact<span class="section-label-line"></span></p>
       <h2 class="section-title">お問い合わせ</h2>
-      <p>ご意見・ご要望・不具合のご報告はこちらからお気軽にどうぞ。</p>
-      <!-- ▼ Google フォームのURLに差し替えてください ▼ -->
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4yqI40snKycwmUbcqbCMmJKkTAy4T33C1d7pGYX413HEjDw/viewform?usp=header" class="contact-btn">
+      <p class="contact-lead">ご意見・ご要望・不具合のご報告は<br>こちらからお気軽にどうぞ。</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4yqI40snKycwmUbcqbCMmJKkTAy4T33C1d7pGYX413HEjDw/viewform?usp=header" class="contact-btn" target="_blank" rel="noopener noreferrer">
         フォームを開く
       </a>
     </div>
@@ -132,8 +187,11 @@
 
   <!-- フッター -->
   <footer>
-    <p>© 2026 Konishi Lab. All rights reserved.</p>
-    <p style="margin-top: 8px;"><a href="privacy.html" class="footer-link">プライバシーポリシー</a></p>
+    <div class="footer-inner">
+      <p class="footer-brand">はたけ日和</p>
+      <p class="footer-copy">© 2026 Konishi Lab. All rights reserved.</p>
+      <p><a href="privacy.html" class="footer-link">プライバシーポリシー</a></p>
+    </div>
   </footer>
 
   <script src="src/script.js"></script>
