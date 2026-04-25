@@ -1,13 +1,14 @@
 {
-  // Cloudflare Workers（Static Assets）デプロイ設定
-  // 参考: https://developers.cloudflare.com/workers/static-assets/
-  "$schema": "https://json.schemastore.org/wrangler.json",
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hatakebiyori-web",
   "compatibility_date": "2026-04-25",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
-    // 静的ファイルの配置ディレクトリ（リポジトリのルート）
-    "directory": "./",
-    // 存在しないURLにアクセスされた時の挙動（custom 404を返す。ファイルがないときはCloudflareの既定404）
-    "not_found_handling": "404-page"
-  }
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
